@@ -1,4 +1,4 @@
-// --------------------- Javascript Way ------------------------
+// --------------------- Javascript Way Plain Vanilla ------------------------
 // Vanilla Javascript way
 
 // var myInput = document.getElementById('myInput');
