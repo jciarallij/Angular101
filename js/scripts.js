@@ -20,6 +20,24 @@ var myApp = angular.module('myApp', []);
 // console.log(myApp)
 myApp.controller('myController', function($scope){
 
+
+	$scope.cities = [
+		{
+			name:'Atlanta',
+			population: 500000
+		},
+		{
+			name: "Houston",
+			population: 2200000
+		},
+		{
+			name: "Portland",
+			population: 610000
+		}
+
+
+
+	];
 	// $scope.first = "Joshua";
 	// $scope.last = "Ciaralli";
 	// $scope.address = "11104 River Ridge Drive";
@@ -60,14 +78,17 @@ myApp.controller('myController', function($scope){
 
 	}
 
-	$scope.removeStudent = function(student){
-		for(i=0; i < $scope.dcClass.length; i++){
-			if (student == $scope.dcClass[i]){
-				$scope.dcClass.splice(i, 1);
-			}
-		}
-		
-		console.log(student);
+	$scope.removeStudent = function(i){
+		$scope.dcClass.splice(i,1);
+		// console.log(i);
 	}
 
 });
+
+
+		// for(i=0; i < $scope.dcClass.length; i++){      /// One way to remove from data from an array
+		// 	if (student == $scope.dcClass[i]){
+		// 		$scope.dcClass.splice(i, 1);
+				// console.log(student);
+		// 	}
+		// }

@@ -24,14 +24,34 @@
 
 	
 	<!--  <li ng-repeat="student in dcClass">{{student.name}} - {{student.desc}} {{student.luckyNumber}} {{student}}</li> -->
-	<li ng-repeat="student in dcClass">
-		<a href="" ng-click="removeStudent(student)">{{student}}</a>
+<!-- 	<li ng-repeat="student in dcClass track by $index">
+		<a href="" ng-click="removeStudent($index)">{{student}}</a>
 	</li>
 	
 	<form ng-submit="addStudent()">
 		<input type="text" ng-model="newStudent">
 		<input type="submit" ng-model="addStudent" value="Add Student">
-	</form>
+	</form> -->
+
+<!-- <div id="city-list">
+	<li ng-repeat="city in cities track by $index">
+		{{city.name}} - {{city.population}}
+		 {{city}} Prints out the object of citie
+	</li>
+</div> -->
+
+<!-- <table border="1">
+	<thead>
+		<th>City Name</th>
+		<th>City Population</th>
+	</thead>
+	<tr ng-repeat="city in cities">
+		<td>{{city.name}}</td>
+		<td>{{city.population}}</td>
+	</tr>
+</table> -->
+
+
 
 
 
