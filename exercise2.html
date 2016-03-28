@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Exercise 2</title>
+</head>
+<body ng-controller="myController">
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+	
+	<!-- Hello, {{first}} {{last}}
+	<br>
+	@ {{address}}
+	<br>
+	 {{city}}, {{state}} {{zip}} -->
+
+	
+	<!--  <li ng-repeat="student in dcClass">{{student.name}} - {{student.desc}} {{student.luckyNumber}} {{student}}</li> -->
+	<li ng-repeat="student in dcClass">
+		<a href="" ng-click="removeStudent(student)">{{student}}</a>
+	</li>
+	
+	<form ng-submit="addStudent()">
+		<input type="text" ng-model="newStudent">
+		<input type="submit" ng-model="addStudent" value="Add Student">
+	</form>
+
+
+
+</body>
+</html>
