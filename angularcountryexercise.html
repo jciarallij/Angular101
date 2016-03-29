@@ -6,6 +6,7 @@
 <body ng-controller="myController">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<!-- <script type="text/javascript" src="js/countries.js"></script> -->
 <script type="text/javascript" src="js/angexercise.js"></script>
 	
 
@@ -25,26 +26,16 @@
 	</tr>
 	<tr>
 	<form ng-submit="addCountry()">
-		<input type="text" ng-model="newCountry" placeholder="Country Name">
-		<input type="text" ng-model="newPop" placeholder="Country Population">
-		<input type="text" ng-model="newLeader" placeholder="Country Leader">
-		<input type="submit" ng-model="addCountry" value="Add Countries Info">
+		<td><input type="text" ng-model="newCountry" placeholder="Country Name"></td>
+		<td><input type="text" ng-model="newPop" placeholder="Country Population"></td>
+		<td><input type="text" ng-model="newLeader" placeholder="Country Leader"></td>
+		<td><input type="submit" ng-model="addCountry" value="Add Countries Info"></td>
 	</form>
-<!-- 	<form ng-submit="addPop()">
-		<input type="text" ng-model="newPop">
-		<input type="submit" ng-model="addCountry" value="Add Population">
-	</form>
-	<form ng-submit="addLeader()">
-		<input type="text" ng-model="newLeader">
-		<input type="submit" ng-model="addLeader" value="Add Leader">
-	</form>
-	<form ng-submit="addFlag()">
-		<input type="text" ng-model="newFlag">
-		<input type="submit" ng-model="addFlag" value="Add Flag">
-	</form> -->
 	</tr>
 </table>
-
+<div id="message">	
+	{{message}}
+</div>
 
 
 

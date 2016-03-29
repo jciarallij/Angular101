@@ -1,15 +1,4 @@
-var myApp = angular.module('myApp', []);
-
-myApp.controller('myController', function($scope, $http){
-
-
-	// $http.get('countries.json').success(function(dataWeGotBack){
-	// 	console.log(dataWeGotBack);
-	// 	$scope.countries = dataWeGotBack;
-	// })
-
-
-	$scope.countries = [
+var countries = [
 		{
 			name:'United States',
 			population: 318000000,
@@ -74,37 +63,3 @@ myApp.controller('myController', function($scope, $http){
 
 
 	];
-
-	$scope.addCountry = function(){
-		if($scope.newCountry.length > 0 && $scope.newPop.length > 0 && $scope.newLeader.length > 0){
-			$scope.countries.push({
-				name: $scope.newCountry,
-				population: $scope.newPop,
-				leader: $scope.newLeader,
-				src: "img/placeholder_converted.png"
-			});
-				$scope.message = $scope.newCountry + ' country was added!';
-				$scope.newCountry = '';
-				$scope.newPop = '';
-				$scope.newLeader = '';
-				
-				
-
-		} else {
-			$scope.newCountry = '';
-			$scope.newPop = '';
-			$scope.newLeader = '';
-			$scope.message = 'Failed to add, fill all inputs!';
-		}
-	
-	}
-
-	$scope.removeCountry = function(i){
-		$scope.message = $scope.countries[i].name + ' was removed!';
-		$scope.countries.splice(i,1);
-		
-	}
-
-});
-
-
