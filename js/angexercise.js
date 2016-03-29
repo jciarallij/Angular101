@@ -76,6 +76,7 @@ myApp.controller('myController', function($scope, $http){
 	];
 
 	$scope.addCountry = function(){
+		$scope.message = 'Failed to add, fill all inputs!';
 		if($scope.newCountry.length > 0 && $scope.newPop.length > 0 && $scope.newLeader.length > 0){
 			$scope.countries.push({
 				name: $scope.newCountry,
@@ -87,16 +88,7 @@ myApp.controller('myController', function($scope, $http){
 				$scope.newCountry = '';
 				$scope.newPop = '';
 				$scope.newLeader = '';
-				
-				
-
-		} else {
-			$scope.newCountry = '';
-			$scope.newPop = '';
-			$scope.newLeader = '';
-			$scope.message = 'Failed to add, fill all inputs!';
-		}
-	
+		} 
 	}
 
 	$scope.removeCountry = function(i){

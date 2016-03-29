@@ -9,16 +9,16 @@
 <!-- <script type="text/javascript" src="js/countries.js"></script> -->
 <script type="text/javascript" src="js/angexercise.js"></script>
 	
-
+<input type="text" ng-model="sortInput">
 
 <table border="1">
 	<thead>
-		<th>Country Name</th>
-		<th>Country Population</th>
-		<th>Country Leader</th>
+		<th><a href="" ng-click="sortField='name'; reverse = !reverse">Country Name</a></th>
+		<th><a href="" ng-click="sortField='population'; reverse = !reverse">Country Population</a></th>
+		<th><a href="" ng-click="sortField='leader'; reverse = !reverse">Country Leader</a></th>
 		<th>Country Flag</th>
 	</thead>
-	<tr ng-repeat="country in countries track by $index">
+	<tr ng-repeat="country in countries | filter:sortInput | orderBy:sortField:reverse track by $index">
 		<td><a href="" ng-click="removeCountry($index)">{{country.name}}</a></td>
 		<td>{{country.population}}</td>
 		<td>{{country.leader}}</td>
